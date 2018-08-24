@@ -1,8 +1,9 @@
-.badge {
-  cursor: pointer;
-}
 button {
   margin-left: 1%;
+}
+input {
+  margin-bottom: 3%;
+  margin-top: 3%;
 }
 table {
   width: 100%;
