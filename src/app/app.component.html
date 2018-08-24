@@ -1,9 +1,29 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container" style="text-align:center">
-<header class="header">
-  <h1>
+<header>
+<h1>
     {{ title }}
-  </h1>
-  <img width="150" alt="Angular Logo" src="./assets/images/angular.png">
+</h1>
+<img width="150" alt="Angular Logo" src="./assets/images/angular.png">
 </header>
+<div class="col">
+<input type="text" placeholder="Add task" #newTodo>
+<button (click)="addTodo(newTodo.value); newTodo.value=''">Add</button>
+<table>
+  <tr>
+    <th>Task</th>
+    <th>Priority</th>
+    <th>Complete</th>
+    <th>Remove</th>
+  </tr>
+  <tr *ngFor="let todo of todos">
+    <td>{{todo.task}}</td>
+    <td>{{todo.priority}}</td>
+    <td>{{todo.done ? '&#10003;' : '&#10005;'}}</td>
+    <td>
+      <button (click)="deleteTodo(todo)">Delete</button>
+    </td>
+  </tr>
+</table>
+</div>
 </div>
