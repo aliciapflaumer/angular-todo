@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 const appRoutes: Routes = [
 
@@ -11,7 +12,8 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomepageComponent
   ],
   imports: [
     RouterModule.forRoot(
