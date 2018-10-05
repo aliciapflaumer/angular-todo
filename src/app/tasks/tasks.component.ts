@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Task } from './task';
 
 @Component({
   selector: 'app-tasks',
@@ -8,17 +9,18 @@ import { Component } from '@angular/core';
 export class TasksComponent {
   // variables
   title = 'Angular To do';
-  todos = [];
+  pageTitle: string = "Task Dashboard"
 
-  addTodo(newTodoTask) {
-    let newTodo = {
-      task: newTodoTask,
-      priority: 1,
-      done: false
-    };
-    this.todos.push(newTodo);
-  }
-  deleteTodo(todo) {
-    this.todos = this.todos.filter( t => t.task !== todo.task );
-  }
+  tasks: Task[] = [
+    {
+      name: "Buy coffee",
+      priority: "1",
+      complete: "",
+    },
+    {
+      name: "Work on project",
+      priority: "2",
+      complete: "",
+    }
+  ]
 }
