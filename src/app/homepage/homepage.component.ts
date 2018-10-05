@@ -8,5 +8,5 @@ import { Component, OnInit } from '@angular/core';
 export class HomepageComponent {
   // variables
   title = 'Angular To do';
-
+  pageTitle: string = "Homepage"
 }

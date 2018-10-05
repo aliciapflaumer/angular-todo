@@ -4,36 +4,33 @@
 </header>
 <router-outlet></router-outlet>
 
+<h1>{{ pageTitle }}</h1>
+
 <div class="col">
-<input type="text" placeholder="Add new task" #newTodo>
-<button class="btn btn-primary" (click)="addTodo(newTodo.value); newTodo.value=''">Add</button>
+<input type="text" placeholder="Add new task" #newTask>
+<button class="btn btn-primary" (click)="addTask(newTask.value); newTask.value=''">Add</button>
 
 <table>
   <tr>
-    <th>Task</th>
+    <th>Name</th>
     <th>Priority</th>
     <th>Complete</th>
     <th>Remove</th>
   </tr>
-  <tr *ngFor="let todo of todos">
-    <td>{{todo.task}}</td>
+  <tr *ngFor="let task of tasks">
+    <td>{{task.name}}</td>
     <td>
       <select>
-        <option>{{todo.priority}}</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
+        <option>{{task.priority}}</option>
       </select>
     </td>
     <td>
       <select>
-        <option>{{todo.done ? '&#10003;' : '&#10005;'}}</option>
-        <option>&#10003;</option>
+        <option>{{task.complete ? '&#10003;' : '&#10005;'}}</option>
       </select>
     </td>
     <td>
-      <button (click)="deleteTodo(todo)">Delete</button>
+      <button (click)="deleteTask(task)">Delete</button>
     </td>
   </tr>
 </table>
