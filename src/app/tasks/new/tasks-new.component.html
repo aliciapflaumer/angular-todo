@@ -13,9 +13,22 @@
           [(ngModel)]="task.name"
       >
     </div>
+    <div class="form-group">
+      <label for="priority">Priority: </label>
+      <input type="number" max="5"
+          id="priority"
+          placeholder="1 - 5 priority level"
+          required
+          name="priority"
+          #priority="ngModel"
+          [(ngModel)]="task.priority"
+      >
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
   </form>
 </div>
 
 <div>
   {{ task.name }}
+  {{ task.priority }}
 </div>
