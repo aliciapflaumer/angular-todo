@@ -1,0 +1,21 @@
+<h1>Create a task</h1>
+<a class="btn btn-primary" routerLink="/tasks">Back to Task Dashboard</a>
+<div>
+  <form #taskForm="ngForm">
+    <div class="form-group">
+      <label for="name">Task name: </label>
+      <input type="text"
+          id="name"
+          placeholder="Add new task"
+          required
+          name="name"
+          #name="ngModel"
+          [(ngModel)]="task.name"
+      >
+    </div>
+  </form>
+</div>
+
+<div>
+  {{ task.name }}
+</div>

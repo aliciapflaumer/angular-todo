@@ -1,5 +1,8 @@
-export interface Task {
-  name: string,
-  priority: string,
-  complete: string,
+export class Task {
+  constructor (
+    id: number,
+    name: string,
+    priority: number,
+    complete: string,
+  ) {}
 }

@@ -13,13 +13,15 @@ export class TasksComponent {
 
   tasks: Task[] = [
     {
+      id: 1,
       name: "Buy coffee",
-      priority: "1",
+      priority: 1,
       complete: "",
     },
     {
+      id: 2,
       name: "Work on project",
-      priority: "2",
+      priority: 2,
       complete: "",
     }
   ]
