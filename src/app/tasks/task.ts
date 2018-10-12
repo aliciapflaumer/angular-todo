@@ -1,8 +1,8 @@
 export class Task {
   constructor (
-    id: number,
-    name: string,
-    priority: number,
-    complete: string,
+    public id: number,
+    public name: string,
+    public priority: number,
+    public complete: string,
   ) {}
 }
