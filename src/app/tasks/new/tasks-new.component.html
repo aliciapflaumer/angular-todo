@@ -1,7 +1,7 @@
 <h1>Create a task</h1>
 <a class="btn btn-primary" routerLink="/tasks">Back to Task Dashboard</a>
 <div>
-  <form #taskForm="ngForm">
+  <form #taskForm="ngForm" (ng-submit)="submitForm()">
     <div class="form-group">
       <label for="name">Task name: </label>
       <input type="text"
@@ -13,9 +13,13 @@
           [(ngModel)]="task.name"
       >
     </div>
+    <div [hidden]="name.valid || name.pristine">
+      <p>Task name is required</p>
+    </div>
+
     <div class="form-group">
       <label for="priority">Priority: </label>
-      <input type="number" max="5"
+      <input type="number" min="1" max="5"
           id="priority"
           placeholder="1 - 5 priority level"
           required
@@ -24,6 +28,10 @@
           [(ngModel)]="task.priority"
       >
     </div>
+    <div [hidden]="priority.valid || priority.pristine">
+      <p>Task priority is required, enter 1 - 5.</p>
+    </div>
+
     <button type="submit" class="btn btn-success">Submit</button>
   </form>
 </div>
