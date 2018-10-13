@@ -11,6 +11,7 @@ export class TasksComponent {
   title = 'Angular To do';
   pageTitle: string = "Task Dashboard"
 
+
   tasks: Task[] = [
     {
       id: 1,
