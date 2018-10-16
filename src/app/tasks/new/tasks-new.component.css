@@ -1,3 +1,11 @@
-.btn {
-  padding-bottom: 10px;
+button {
+  margin-bottom: 10px;
+}
+
+input {
+  border-radius: 5px;
+}
+
+label {
+  margin-right: 5px;
 }

@@ -1,5 +1,5 @@
+<div class="container">
 <h1>Create a task</h1>
-<a class="btn btn-primary" routerLink="/tasks">Back to Task Dashboard</a>
 <div>
   <form #taskForm="ngForm" (ng-submit)="submitForm()">
     <div class="form-group">
@@ -39,4 +39,6 @@
 <div>
   {{ task.name }}
   {{ task.priority }}
+</div>
+<a class="btn btn-primary" routerLink="/tasks">Back to Task Dashboard</a>
 </div>

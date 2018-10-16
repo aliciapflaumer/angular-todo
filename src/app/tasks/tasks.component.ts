@@ -12,18 +12,18 @@ export class TasksComponent {
   title = 'Angular To do';
   pageTitle: string = "Task Dashboard"
 
-  // tasks: Task[] = [
-  //   {
-  //     id: 1,
-  //     name: "Buy coffee",
-  //     priority: 1,
-  //     complete: "",
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "Work on project",
-  //     priority: 2,
-  //     complete: "",
-  //   }
-  // ]
+  tasks: Task[] = [
+    {
+      id: 1,
+      name: "Buy coffee",
+      priority: 1,
+      complete: "",
+    },
+    {
+      id: 2,
+      name: "Work on project",
+      priority: 2,
+      complete: "",
+    }
+  ]
 }

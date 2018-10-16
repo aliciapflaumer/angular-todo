@@ -7,11 +7,21 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/home">Home</a>
+        <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/tasks">Tasks</a>
+        <a class="nav-link" routerLink="/tasks" routerLinkActive="active">Dashboard</a>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          New Task
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/tasks/new" routerLinkActive="active">Create new task</a>
+        </div>
+      </li>
+
+
       <!-- <li class="nav-item">
         <a class="nav-link">Sign up</a>
       </li>
@@ -27,5 +37,4 @@
     </ul>
   </div>
 </nav>
-
 <router-outlet></router-outlet>
