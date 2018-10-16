@@ -3,7 +3,8 @@ import { Task } from '../task';
 
 @Component({
   selector: 'tasks-new',
-  templateUrl: './tasks-new.component.html'
+  templateUrl: './tasks-new.component.html',
+  styleUrls: ['./tasks-new.component.css']
 })
 export class TasksNewComponent {
   task = new Task;
